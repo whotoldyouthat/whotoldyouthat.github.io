@@ -1,0 +1,120 @@
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: clip;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.graphicHeader {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-color: var(--dark-transparent);
+  overflow: hidden;
+}
+
+.heroWord {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.heroWord h1 {
+  margin: 0;
+  line-height: 0.9;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.heroWord h2 {
+  margin: 0;
+  line-height: 0.9;
+  user-select: none;
+  font-family: "Bebas Neue";
+  font-size: 3.2rem;
+}
+
+.heroWord:hover h1 {
+  color: var(--primary-light);
+}
+
+.graphicHeader .char {
+  display: inline-block;
+  color: var(--primary-light);
+  will-change: transform, opacity;
+}
+
+.heroWord:nth-child(1) {
+  top: 2%;
+  left: -1%;
+}
+
+.heroWord:nth-child(2) {
+  top: 20%;
+  left: 23%;
+}
+
+.heroWord:nth-child(3) {
+  top: 38%;
+  right: 47%;
+}
+
+.heroWord:nth-child(4) {
+  top: 55%;
+  right: -3%;
+}
+
+.heroWord:nth-child(5) {
+  top: 75%;
+  right: 40%;
+}
+
+@media (max-width: 520px) {
+  .graphicHeader {
+    height: 100vh;
+  }
+
+  .heroWord h1 {
+    font-size: 5.5rem;
+    margin: 0;
+    line-height: 0.9;
+    user-select: none;
+  }
+
+  .heroWord h2 {
+    margin: 0;
+    line-height: 0.9;
+    user-select: none;
+    font-family: "Bebas Neue";
+    font-size: 2.5rem;
+  }
+
+  .heroWord:nth-child(1) {
+    top: 8%;
+    left: -2%;
+  }
+
+  .heroWord:nth-child(2) {
+    top: 22%;
+    left: 13%;
+  }
+
+  .heroWord:nth-child(3) {
+    top: 36%;
+    right: 28%;
+  }
+
+  .heroWord:nth-child(4) {
+    top: 49%;
+    right: -6%;
+  }
+  .heroWord:nth-child(5) {
+    width: 80%;
+    top: 65%;
+    left: 6%;
+  }
+}

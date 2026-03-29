@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c852136.css",
+    "main.js": "/static/js/main.408e9b41.js",
+    "static/media/AdobeStock_630019023.png": "/static/media/AdobeStock_630019023.7b6f6352cf86e43ade13.png",
+    "static/media/BoldFintiaVF.woff2": "/static/media/BoldFintiaVF.7ce4ee85a9e37b4c2c72.woff2",
+    "static/media/bb_tua.svg": "/static/media/bb_tua.613c995a322d05e1b89794570b93b004.svg",
+    "static/media/ig.svg": "/static/media/ig.c2a53da9d05802c1b9af265acbf9446b.svg",
+    "index.html": "/index.html",
+    "main.1c852136.css.map": "/static/css/main.1c852136.css.map",
+    "main.408e9b41.js.map": "/static/js/main.408e9b41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c852136.css",
+    "static/js/main.408e9b41.js"
+  ]
+}
