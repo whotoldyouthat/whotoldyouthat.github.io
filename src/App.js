@@ -25,7 +25,7 @@ export default function App() {
       scrollTo: {
         y: target,
         offsetY: 80,
-        autoKill: true,
+        autoKill: false,
       },
       ease: "power2.out",
     });
@@ -61,6 +61,7 @@ export default function App() {
       infoTrigger.kill();
       gsap.killTweensOf(window);
     };
+
   }, []);
 
   return (

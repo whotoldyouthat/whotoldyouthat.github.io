@@ -79,7 +79,7 @@
   }
 
   .heroWord h1 {
-    font-size: 5.5rem;
+    font-size: 4.2rem;
     margin: 0;
     line-height: 0.9;
     user-select: none;
@@ -94,27 +94,27 @@
   }
 
   .heroWord:nth-child(1) {
-    top: 8%;
+    top: 6%;
     left: -2%;
   }
 
   .heroWord:nth-child(2) {
-    top: 22%;
-    left: 13%;
+    top: 18%;
+    left: 15%;
   }
 
   .heroWord:nth-child(3) {
-    top: 36%;
-    right: 28%;
+    top: 29%;
+    right: 30%;
   }
 
   .heroWord:nth-child(4) {
-    top: 49%;
-    right: -6%;
+    top: 40%;
+    right: -4%;
   }
   .heroWord:nth-child(5) {
     width: 80%;
-    top: 65%;
-    left: 6%;
+    top: 55%;
+    left: 9%;
   }
 }
