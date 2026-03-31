@@ -47,7 +47,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
           className="reverse"
           label="Register Now"
           onClick={() =>
-            window.open("https://your-registration-link.com", "_blank")
+            window.open("https://www.eventbrite.com/e/who-told-you-that-creativity-masculinity-the-way-forward-tickets-1986209999576?aff=oddtdtcreator", "_blank")
           }
         />
       </div>
