@@ -120,7 +120,7 @@ ul li::marker {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url("/public/wtyt-header-02.jpg");
+  background-image: url("/public/wtyd-header-02.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
