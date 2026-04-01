@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.77db12a7.css",
-    "main.js": "/static/js/main.57263fa4.js",
+    "main.css": "/static/css/main.6db858a5.css",
+    "main.js": "/static/js/main.760ab7b4.js",
     "static/media/wtyd-header-02.jpg": "/static/media/wtyd-header-02.606f92e033da0030556d.jpg",
     "static/media/BoldFintiaVF.woff2": "/static/media/BoldFintiaVF.7ce4ee85a9e37b4c2c72.woff2",
-    "static/media/bb_tua.svg": "/static/media/bb_tua.613c995a322d05e1b89794570b93b004.svg",
+    "static/media/BB.svg": "/static/media/BB.18c13d65c407188fb3808ca5ace4de69.svg",
+    "static/media/bb_tua.svg": "/static/media/bb_tua.18c13d65c407188fb3808ca5ace4de69.svg",
     "static/media/ig.svg": "/static/media/ig.c2a53da9d05802c1b9af265acbf9446b.svg",
     "index.html": "/index.html",
-    "main.77db12a7.css.map": "/static/css/main.77db12a7.css.map",
-    "main.57263fa4.js.map": "/static/js/main.57263fa4.js.map"
+    "main.6db858a5.css.map": "/static/css/main.6db858a5.css.map",
+    "main.760ab7b4.js.map": "/static/js/main.760ab7b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.77db12a7.css",
-    "static/js/main.57263fa4.js"
+    "static/css/main.6db858a5.css",
+    "static/js/main.760ab7b4.js"
   ]
 }

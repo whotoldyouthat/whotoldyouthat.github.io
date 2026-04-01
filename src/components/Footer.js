@@ -1,4 +1,4 @@
-import { ReactComponent as Logos } from "../assets/img/bb_tua.svg";
+import { ReactComponent as Logo } from "../assets/img/BB.svg";
 import { ReactComponent as Social } from "../assets/img/ig.svg";
 import Button from "./Button";
 
@@ -17,13 +17,13 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
       </div>
 
       <div>
-        <a
+        {/* <a
           href="https://www.torrens.edu.au/billy-blue-college-of-design"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Logos className="logosSVG cursorTarget" />
-        </a>
+          <Logo className="bbSVG cursorTarget" />
+        </a> */}
       </div>
 
       <div>
@@ -47,7 +47,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
           className="reverse"
           label="Register Now"
           onClick={() =>
-            window.open("https://www.eventbrite.com/e/who-told-you-that-creativity-masculinity-the-way-forward-tickets-1986209999576?aff=oddtdtcreator", "_blank")
+            window.open("https://www.eventbrite.com/e/who-told-you-that-creativity-masculinity-the-way-forward-tickets-1986209999576", "_blank")
           }
         />
       </div>

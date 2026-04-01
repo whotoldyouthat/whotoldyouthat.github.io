@@ -111,15 +111,15 @@ function InfoSection({ sectionRef }) {
             </p>
           </div>
           <div>
-            <a
+            {/* <a
               href="https://www.torrens.edu.au/billy-blue-college-of-design"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Logos className="logosSVG" />
-            </a>
+            </a> */}
             <a
-              href="https://instagram.com/whotoldyouthatbne"
+              href="https://instagram.com/who_told_you_that_bne"
               target="_blank"
               rel="noopener noreferrer"
             >
