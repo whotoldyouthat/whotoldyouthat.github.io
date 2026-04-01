@@ -28,7 +28,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
 
       <div>
         <a
-          href="https://instagram.com/whotoldyouthatbne"
+          href="https://instagram.com/who_told_you_that_bne"
           target="_blank"
           rel="noopener noreferrer"
         >
