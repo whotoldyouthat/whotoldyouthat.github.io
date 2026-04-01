@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 import Footer from "./components/Footer";
 import HeroHeader from "./components/HeroHeader";
@@ -9,7 +10,7 @@ import InfoSection from "./components/InfoSection";
 
 import "./styles/main.css";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, useGSAP);
 
 export default function App() {
   const homeRef = useRef(null);
@@ -64,8 +65,69 @@ export default function App() {
 
   }, []);
 
+const appRef = useRef(null);
+
+useGSAP(
+  () => {
+    const cursor = document.querySelector(".cursor");
+    if (!cursor) return;
+
+    gsap.set(cursor, { xPercent: -50, yPercent: -50, scale: 1 });
+
+    const xTo = gsap.quickTo(cursor, "x", {
+      duration: 0.6,
+      ease: "power3",
+    });
+
+    const yTo = gsap.quickTo(cursor, "y", {
+      duration: 0.6,
+      ease: "power3",
+    });
+
+    const scaleTo = gsap.quickTo(cursor, "scale", {
+      duration: 0.2,
+      ease: "power2.out",
+    });
+
+    const handleMove = (e) => {
+      xTo(e.clientX);
+      yTo(e.clientY);
+    };
+
+    const handleOver = (e) => {
+      const target = e.target.closest(".cursorTarget");
+      if (target) {
+        scaleTo(1.8);
+        cursor.classList.add("cursor--active");
+      }
+    };
+
+    const handleOut = (e) => {
+      const target = e.target.closest(".cursorTarget");
+      if (target) {
+        scaleTo(1);
+        cursor.classList.remove("cursor--active");
+      }
+    };
+
+    window.addEventListener("mousemove", handleMove);
+    document.addEventListener("mouseover", handleOver);
+    document.addEventListener("mouseout", handleOut);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      document.removeEventListener("mouseover", handleOver);
+      document.removeEventListener("mouseout", handleOut);
+    };
+  },
+  { scope: appRef }
+);
+
+  
+
   return (
     <div className="App">
+      <div className="cursor" />
       <section ref={homeRef} className="section hero-section">
         <HeroHeader />
         <div className="peak" />

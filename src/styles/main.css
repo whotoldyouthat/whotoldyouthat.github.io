@@ -116,6 +116,41 @@ ul li::marker {
   color: var(--riot-pink);
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0.6em;
+  height: 0.6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--riot-pink);
+  background-color: var(--riot-pink);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+/* .cursor:hover {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(253, 198, 1, 0.5);
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+} */
+
+/* body:has(a:hover) .cursor, button:has(a:hover) .cursor {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(1, 1, 1, 0.5);
+} */
+
+.cursor--active {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+
 .App {
   display: flex;
   flex-direction: column;
@@ -272,6 +307,10 @@ details[open] summary::after {
 
   h4 {
     width: 100%;
+  }
+
+  .cursor {
+    display: none;
   }
 
   .content {

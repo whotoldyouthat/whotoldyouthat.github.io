@@ -113,6 +113,12 @@ button.reverse:hover {
   width: 100%;
 }
 
+button:has(a:hover) .cursor {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(253, 198, 1, 0.5);
+}
+
 @media (max-width: 1100px) {
   .footer {
     display: flex;
@@ -156,7 +162,7 @@ button.reverse:hover {
   .menu button:active, .menu button:focus {
     background-color: var(--riot-pink);
   }
-}
+
 
 button {
   background-color: var(--dark-transparent);
@@ -191,4 +197,5 @@ button.reverse:hover {
   border-color: var(--riot-pink);
   background-color: var(--riot-pink);
   color: var(--primary-dark);
+}
 }

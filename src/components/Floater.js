@@ -32,10 +32,10 @@ function Floater() {
     <aside ref={floaterRef} className="floatContainer">
       <h5>5pm&emsp;/&emsp;April 29</h5>
       <details>
-        <summary>
+        <summary className="cursorTarget">
           <h5>Torrens University</h5>
         </summary>
-        <a href="https://maps.app.goo.gl/8MPbfFYUq8fiqDVD8" target="_blank">
+        <a href="https://maps.app.goo.gl/8MPbfFYUq8fiqDVD8" target="_blank" className="cursorTarget">
           <h6>Fortitude Valley Campus — Level 2</h6>
         </a>
       </details>

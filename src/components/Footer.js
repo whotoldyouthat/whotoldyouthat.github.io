@@ -22,7 +22,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Logos className="logosSVG" />
+          <Logos className="logosSVG cursorTarget" />
         </a>
       </div>
 
@@ -32,7 +32,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Social className="socialSVG" />
+          <Social className="socialSVG cursorTarget" />
         </a>
       </div>
 
