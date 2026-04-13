@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import HeroHeader from "./components/HeroHeader";
 import InfoSection from "./components/InfoSection";
 
+
 import "./styles/main.css";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, useGSAP);

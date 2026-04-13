@@ -1,3 +1,10 @@
+import Floater from "./Floater";
+import CardCarousel from "./CardCarousel";
+import { ReactComponent as Logos } from "../assets/img/bb_tua.svg";
+import { ReactComponent as Social } from "../assets/img/ig.svg";
+import { useRef } from "react";
+import gsap from "gsap";
+
 const infoSections = [
   {
     title: "WHAT IT IS",
@@ -17,6 +24,35 @@ const infoSections = [
           for what comes next.
         </p>
       </>
+    ),
+  },
+  {
+    title: "WHY IT IS",
+    body: (
+      <>
+      <p>
+        Our research this trimester has led us to exploring the cultural impact of harmful gender norms and the influence of toxic masculinity. While modern masculinity appears to be progressing toward a more emotionally intelligent, equality driven ideal, the rapid rise of <i>The Manosphere</i>, with its emphasis
+on dominance and rigid gender roles, reveals an
+undeniable and unresolved tension between two
+very different value systems.
+      </p>
+      <p>
+        This problem has real, measurable, and
+intersectional consequences. While women (cis
+and trans), nonbinary folk, and other gender-diverse
+communities disproportionately experience harm
+from toxic masculinity, men themselves also suffer
+through poor mental health, damaged relationships,
+and fractured senses of identity — stifling social
+progression for all. 
+      </p>
+      <p>
+This isn't anything new, but we're
+asking why it persists. Where do our current systems
+fall short, and what do we need to do differently?
+      </p>
+      </>
+      
     ),
   },
   {
@@ -45,11 +81,24 @@ const infoSections = [
   },
 ];
 
-import Floater from "./Floater";
-import { ReactComponent as Logos } from "../assets/img/bb_tua.svg";
-import { ReactComponent as Social } from "../assets/img/ig.svg";
-
 function InfoSection({ sectionRef }) {
+
+  const guestsRef = useRef(null);
+
+const scrollToGuests = () => {
+  if (!guestsRef.current) return;
+
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: guestsRef.current,
+      offsetY: 80,
+      autoKill: false,
+    },
+    ease: "power2.out",
+  });
+};
+
   return (
     <section ref={sectionRef} className="section info-section">
       <div className="content">
@@ -61,38 +110,75 @@ function InfoSection({ sectionRef }) {
             </h4>
           </div>
 
+
           <div className="infoText">
+
             <div className="infoRow infoIntroRow">
-              <div className="infoLabel" />
-              <div className="infoBody">
-                <h6>
-                  Join us for an evening of conversation exploring how
-                  storytelling, design, media, music, film, and other creative
-                  practices can foster emotional literacy, authentic connection,
-                  and more positive expressions of male identity.
-                </h6>
-              </div>
-            </div>
 
-            {infoSections.map((section) => (
-              <div className="infoRow" key={section.title}>
-                <div className="infoLabel">
-                  <h5>{section.title}</h5>
+              <div className="infoLabel" />
+              
+                <div className="infoBody">
+                  <h6>
+                    Join us for an evening of candid conversation about masculinity, culture, and the creative power to shape what comes next — featuring guest panel discussion, audience participation, and a student innovation showcase.
+                  </h6>
+                  <button type="button" className="skipLink cursorTarget" onClick={scrollToGuests}>
+                    👉&ensp;Skip the explainer — show me who I'm talking to
+                  </button>
                 </div>
-                <div className="infoBody">{section.body}</div>
               </div>
-            ))}
 
-            <div className="infoRow infoNotesRow">
-              <div className="infoLabel" />
-              <div className="infoBody notes">
-                <p>* Guest speakers to be announced</p>
-                <p>
-                  * Capacity is limited, please register by April 22 to avoid
-                  missing out
-                </p>
+              {infoSections.map((section) => (
+                <div className="infoRow" key={section.title}>
+
+                  <div className="infoLabel">
+                    <h5>{section.title}</h5>
+                  </div>
+
+                  <div className="infoBody">
+                    {section.body}
+                  </div>
+
+                </div>
+              ))}
+
+            <div className="infoRow">
+
+              <div className="infoLabel">
+                <h5>THE GUESTS</h5>
               </div>
+
+              <div className="infoBody">
+                <div ref={guestsRef} className="guestSection">
+                  <CardCarousel />
+                </div>
+              </div>
+
             </div>
+
+              <div className="infoRow">
+                <div className="infoLabel">
+                  <h5>Get Involved</h5>
+                </div>
+                <div className="infoBody">
+
+                  <p>No one arrives at a conversation empty-handed. Our beliefs, opinions, and ways of thinking are shaped by lived experience — taught, questioned, resisted and carried with us through life — and your perspective is as unique as it is important.</p>
+
+                  <p>
+                    This is your opportunity to submit your most relevant, thought-provoking questions for our panel, and we'll ask them on your behalf.
+
+                  </p>
+
+                  <p>We really believe the conversation we are trying to create is stronger when it includes the people it's speaking to. By submitting a question, you're helping to bring more honesty, nuance, and real-world experience into the discussion.</p>
+
+                  <button type="button" className="skipLink cursorTarget" onClick={scrollToGuests}><a href="https://forms.cloud.microsoft/r/8Jn7kf3kYs" target="_blank" className="qSubmit cursorTarget">
+   📥&ensp;Submit your question
+          
+        </a>
+</button>
+                
+                </div>
+              </div>
+
           </div>
         </div>
 
@@ -103,11 +189,7 @@ function InfoSection({ sectionRef }) {
         <div className="altFooter">
           <div>
             <p className="aoc">
-              This event is an original student production created by students
-              at Billy Blue College of Design on the lands of the Turrbul &
-              Yuggera People. All ideas, concepts, and materials have been
-              developed independently by the student team. © 2026. All Rights
-              Reserved.
+              This is a student-led project by students at Billy Blue College of Design on the lands of the Turrbul & Yuggera peoples. All views expressed are entirely our own and do not reflect those of the university. © 2026. All Rights Reserved.
             </p>
           </div>
           <div>

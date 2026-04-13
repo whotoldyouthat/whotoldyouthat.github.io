@@ -2,11 +2,12 @@
 
 :root {
   --primary-dark: #111;
-  --primary-light: #eeeeee;
+  --primary-light: #e4e4e4;
   --light-transparent: rgba(238, 238, 238, 0.2);
+  --lighter-transparent: rgba(255, 255, 255, 0.509);
   --dark-transparent: rgba(1, 1, 1, 0.8);
   --darker-transparent: rgba(1, 1, 1, 0.95);
-  --riot-pink: #fdc601;
+  --riot-pink: #ee97ff;
   font-size: 16px;
 }
 
@@ -37,7 +38,7 @@ html {
 
 section {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -45,6 +46,7 @@ a,
 a:visited,
 a::after {
   color: var(--primary-light);
+  transition-duration: 0.3s;
 }
 
 a:hover {
@@ -98,8 +100,9 @@ p {
   font-family: "Manrope", sans serif;
   color: var(--primary-light);
   text-wrap: balance;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+  letter-spacing: 1.5%;
 }
 
 ul {
@@ -186,8 +189,8 @@ ul li::marker {
 .infoText {
   display: flex;
   flex-direction: column;
-  padding: 0 10%;
-  gap: 2.5rem;
+  padding: 1.2rem 10%;
+  gap: 2rem;
   width: 66%;
 }
 
@@ -195,6 +198,7 @@ ul li::marker {
   display: grid;
   grid-template-columns: 10rem minmax(0, 1fr);
   gap: 2rem;
+  padding: 2rem 0;
   align-items: start;
 }
 
@@ -205,6 +209,29 @@ ul li::marker {
   margin-top: 0;
 }
 
+.infoBody h6 {
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1%;
+}
+
+.skipLink {
+  font-size: 1.3rem;
+  letter-spacing: 1%;
+  border: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  background: transparent;
+  display: inline-block;
+  max-width: 100%;
+  text-wrap: balance;
+  text-align: left;
+}
+
+.skipLink:hover {
+  color: var(--riot-pink);
+}
+
 .infoBody p:last-child,
 .infoBody ul:last-child {
   margin-bottom: 0;
@@ -213,7 +240,8 @@ ul li::marker {
 .infoIntroRow .infoBody h6 {
   padding: 0;
   margin: 0;
-  max-width: 42rem;
+  width: 100%;
+  /* max-width: 42rem; */
 }
 
 .infoBody p {
@@ -300,6 +328,10 @@ details[open] summary::after {
   display: none;
 }
 
+.qSubmit {
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   :root {
     font-size: 17px;
@@ -380,5 +412,10 @@ details[open] summary::after {
     margin: 0 3rem 0 0;
     height: auto;
     display: block;
+  }
+
+  .skipLink {
+    display: block;
+    width: 100%;
   }
 }

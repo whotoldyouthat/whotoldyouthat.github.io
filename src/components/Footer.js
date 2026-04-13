@@ -9,10 +9,7 @@ function Footer({ activeSection, onHomeClick, onInfoClick }) {
     <footer className="footer bar">
       <div>
         <p className="aoc">
-          This event is an original student production created by students at
-          Billy Blue College of Design on the lands of the Turrbul & Yuggera
-          People. All ideas, concepts, and materials have been developed
-          independently by the student team. © 2026. All Rights Reserved.
+          This is a student-led project by students at Billy Blue College of Design on the lands of the Turrbul & Yuggera peoples. All views expressed are entirely our own and do not reflect those of the university. © 2026. All Rights Reserved.
         </p>
       </div>
 
