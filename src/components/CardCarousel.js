@@ -40,7 +40,7 @@ const cards = [
   },
   {
     name: "Join the conversation",
-    role: "Submit a question for our panel and we'll ask it for you. No scary public speaking necessary.",
+    role: "Submit a question below for our panel and we'll ask it for you. No scary public speaking necessary.",
     headshot:
       "https://raw.githubusercontent.com/whotoldyouthat/whotoldyouthat.github.io/refs/heads/main/public/and-you-carousel.jpg",
     bio: "",
